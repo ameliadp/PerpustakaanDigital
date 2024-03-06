@@ -20,7 +20,7 @@ class SavedView extends GetView<SavedController> {
         title: Padding(
           padding: const EdgeInsets.only(bottom: 8.0),
           child: Text(
-            'Saved',
+            'Your BookMark',
             style: GoogleFonts.quicksand(
                 color: colorPrimary,
                 fontSize: 25.0,

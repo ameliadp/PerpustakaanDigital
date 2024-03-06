@@ -1,5 +1,5 @@
 class URL {
-  static String host = "https://a9a1-103-108-20-102.ngrok-free.app";
+  static String host = "https://e41b-103-165-41-34.ngrok-free.app";
   static String baseUrl = '$host/api';
   static String loginUrl = '$baseUrl/login';
   static String registerUrl = '$baseUrl/register';

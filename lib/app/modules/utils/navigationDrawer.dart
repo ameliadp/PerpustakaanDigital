@@ -48,7 +48,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
               onClicked: () => selectedItem(context, 2),
             ),
             buildMenuItem(
-              text: 'Saved',
+              text: 'Your BookMark',
               image: 'assets/images/saved.png',
               onClicked: () => selectedItem(context, 5),
             ),

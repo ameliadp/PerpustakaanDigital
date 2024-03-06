@@ -58,7 +58,7 @@ class LoadingOverlayAlt extends StatelessWidget {
                           decoration: TextDecoration.none,
                           fontWeight: FontWeight.w700,
                           color: Colors.white,
-                        ),
+                        ), 
                       )
                     ],
                   ),

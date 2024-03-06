@@ -96,16 +96,16 @@ class HomeView extends GetView<HomeController> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {
-                        Get.toNamed(Routes.TOP_BOOK);
-                      },
-                      child: Text(
-                        'See All',
-                        style: GoogleFonts.quicksand(
-                            color: const Color(0xff89AEF4), fontSize: 15.0),
-                      ),
-                    ),
+                    // TextButton(
+                    //   onPressed: () {
+                    //     Get.toNamed(Routes.TOP_BOOK);
+                    //   },
+                    //   child: Text(
+                    //     'See All',
+                    //     style: GoogleFonts.quicksand(
+                    //         color: const Color(0xff89AEF4), fontSize: 15.0),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -117,7 +117,9 @@ class HomeView extends GetView<HomeController> {
                   child: GetBuilder<HomeController>(
                     builder: (controller) => ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: controller.popularBooks.length,
+                      itemCount: controller.popularBooks.length > 10
+                          ? 10
+                          : controller.popularBooks.length,
                       itemBuilder: (context, index) {
                         final BookModel book = controller.popularBooks[index];
                         return TopBookItem(
@@ -159,7 +161,9 @@ class HomeView extends GetView<HomeController> {
                       mainAxisSpacing: 12.0,
                       childAspectRatio: 0.6,
                     ),
-                    itemCount: controller.books.length,
+                    itemCount: controller.books.length > 20
+                        ? 20
+                        : controller.books.length,
                     itemBuilder: (context, index) {
                       final BookModel book = controller.books[index];
                       return BookItem(
